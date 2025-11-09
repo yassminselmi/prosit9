@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SocieteArrayList implements IGestion<Employe> {
+public class SocieteArrayList implements IGestion<Employe>,IRechercheAvancee<Employe> {
     List<Employe> employees=new ArrayList<Employe>();
     @Override
     public void ajouterEmploye(Employe employee) {
@@ -46,4 +46,14 @@ public class SocieteArrayList implements IGestion<Employe> {
         Collections.sort(employees, new EmployeeDepNameAndGradeComparator());
     }
 
+    @Override
+    public List<Employe> rechercherParDepartement(String nomDepartement) {
+        List list=new ArrayList();
+        for (Employe employee:employees){
+            if (employee.getNomDepart().equals(nomDepartement)) {
+                list.add(employee);
+            }
+        }
+        return list;
+    }
 }
