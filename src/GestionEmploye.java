@@ -1,7 +1,7 @@
 public class GestionEmploye {
     public static void main(String[] args) {
         SocieteArrayList s1 = new SocieteArrayList();
-
+        SocieteArrayList s2 = new SocieteArrayList();
         Employe e1 = new Employe();
         Employe e2 = new Employe();
         Employe e3 = new Employe();
@@ -12,8 +12,9 @@ public class GestionEmploye {
 
         e2.setNom("badis");
         e2.setPrenom("labidi");
-        e2.setNomDepart("B");
+        e2.setNomDepart("A");
         e2.setGrade(2);
+
         e3.setNom("chaima");
         e3.setPrenom("ltaif");
         e3.setNomDepart("C");
@@ -30,5 +31,8 @@ public class GestionEmploye {
         System.out.println("**********Apres Tri par Nom departement et grade********");
         s1.trierEmployeParNomDepartementEtGrade();
         s1.displayEmploye();
+        System.out.println("******Recherche par dep*******");
+        s2.employees=s1.rechercherParDepartement("A");
+        s2.displayEmploye();
     }
 }
