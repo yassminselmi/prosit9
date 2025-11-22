@@ -45,7 +45,7 @@ public class Employe implements Comparable<Employe>{
     }
     @Override
     public String toString() {
-        return ("Employee id:"+id+",Nom:"+getNom()+",Prenom:"+getPrenom()+",Grade:"+getGrade()+"dan departement:"+getNomDepart());
+        return ("Employee id:"+id+",Nom:"+getNom()+",Prenom:"+getPrenom()+",Grade:"+getGrade()+", Departement:"+getNomDepart());
     }
 
     @Override
